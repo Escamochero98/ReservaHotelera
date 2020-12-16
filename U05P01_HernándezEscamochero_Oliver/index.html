@@ -1,0 +1,108 @@
+<html>
+
+<head>
+    <title>Reserva hotelera.</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="./css/estilo.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Reserva hotelera.</h1>
+    </header>
+
+    <section id="contenidoGeneral">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#home" autofocus>🛌 Hoteles</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="vuelos" data-toggle="tab" href="#menu1">✈️🛌Vuelos y Hoteles</a>
+            </li>
+        </ul>
+        <div id="contenidoReserva">
+            <div id="conteTodo">
+                <div class="tab-content">
+                    <div id="home" class="container tab-pane active"><br>
+                        <div id="conteOpciones">
+                            <div class="divsOpciones" id="divNombre">
+                                <p>Hotel o destino</p>
+                                <input id="nombre" required>
+                            </div>
+                            <div class="divsOpciones" id="divFecha">
+                                <p>Fecha de entrada</p>
+                                <input type="date" id="calendario">
+                            </div>
+                            <div class="divsOpciones" id="divNoches">
+                                <p>Número de noches</p>
+                                <select class="form-control" id="numNoches" value="">
+                                    <optgroup label="COMUNES"></optgroup>
+                                    <option value="4 Noches">4 Noches</option>
+                                    <option value="7 Noches">7 Noches</option>
+                                    <option value="10 Noches">10 Noches</option>
+                                    <option value="14 Noches">14 Noches</option>
+                                    <optgroup label="DIARIAS"></optgroup>
+                                    <option value="1 Noches">1 Noche</option>
+                                    <option value="2 Noches">2 Noches</option>
+                                    <option value="3 Noches">3 Noches</option>
+                                    <option value="4 Noches">4 Noches</option>
+                                    <option value="5 Noches">5 Noches</option>
+                                    <option value="6 Noches">6 Noches</option>
+                                    <option value="7 Noches">7 Noches</option>
+                                    <option value="8 Noches">8 Noches</option>
+                                </select>
+                            </div>
+                            <div class="divsOpciones" id="divHabitaciones">
+                                <p>Habitaciones</p>
+                                <input type="text" id="habitaciones" data-toggle="popover" data-placement="bottom"
+                                    READONLY />
+                            </div>
+                        </div>
+                    </div>
+                    <div id="menu1" class="container tab-pane fade"><br>
+                        <h3>Estamos trabajando en esta sección, disculpe las molestias.</h3>
+                    </div>
+                </div>
+                <button id="buscar">Buscar</button>
+            </div>
+        </div>
+    </section>
+
+    <template>
+        <div id="seccion">
+            <div id="borrarConte">
+                <button id="deleteNode">X</button>
+            </div>
+            <h1 id="habitacionNum">1 Room</h1>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Adultos</label>
+                <select class="form-control" id="numAdultos">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect2">Niños</label>
+                <select class="form-control" id="numNinios">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </div>
+        </div>
+        <div class="vl"></div>
+    </template>
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
